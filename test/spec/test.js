@@ -9,27 +9,4 @@
     	})
     })
 
-
-
-
-
-
-
-
-
-
-    //     describe('that has Parse(server) functionality', function () {
-    //         it('that passes around an object instance', function () {
-    //         	message.set('username', $('#username').val());
-
-    //         	success: function(results) {
-    //                 result = results[0];
-    //                 expect(('message')).();
-    //                 done();
-    //             },
-    //             error: function(error) {
-    //                 done(error.description)
-    //         });
-    //     });
-    // });
 })();
