@@ -5,7 +5,7 @@ $dark-grey: #909090;
 $very-light-grey: #FCFCFC;
 $cool-blue-gradient: linear-gradient(top, lighten($blue, 10%), $blue);
 $black-gradient: linear-gradient(top, lighten(black, 20%), black);
-
+$gitred: rgb(175, 30, 30);
 
 .navbar-header {}
 	
@@ -14,7 +14,10 @@ $black-gradient: linear-gradient(top, lighten(black, 20%), black);
 	// background: linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
 	padding-bottom: 5px;
 	color: black;
-	border-bottom-width: 5px;
+	border-bottom-width: 10px;
+	border-style: double;
+	background-image: url('http://www.desktopas.com/files/2013/06/Black-Abstract-Background-Minimalistic-Textures-Gray-White-Arrows-1920x1080.jpg');
+
 
 }
 
@@ -30,22 +33,49 @@ $black-gradient: linear-gradient(top, lighten(black, 20%), black);
 
 //git-Smack 
 .navbar-inverse .navbar-brand{
-	color: black;
+	color: whitesmoke;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 600;
 	font-size: 40px;
 	padding-bottom: 5px;
+	// text-shadow: -1px 1px 0px rgb(175, 30, 30);
+
 }
 
-// .nav:hover {
-// 	background: white;
-// }
+// active: git-Smack
+.navbar-inverse .navbar-brand:hover {
+	color: whitesmoke;
+}
+
+// About and Home
+.navbar-inverse .navbar-nav > li > a {
+	color: whitesmoke;
+}
 
 .navbar-brand {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+// About, Home, User
+.navbar-nav {
+	position: absolute;
+	float: left;
+	margin: 0;
+	left: 30px;
+	font-family: Source Sans Pro;
+	font-weight: 900;
+	font-size: 20px;
+	top: 25px;
+}
+
+#active {
+	color: whitesmoke;
+}
+
 body {
+	background-image: url('http://s1.goodfon.com/wallpaper/previews-middle/63011.jpg');
+	background-size: 615px 950px;
+
 	// background-image:url('http://cdn.bleacherreport.net/images_root/slides/photos/000/897/602/smackdown-logo_display_image.png?1303990582');
 	// background-repeat: repeat-y;
 	
@@ -109,7 +139,7 @@ body {
 		// inset 5px -6px 5px #0033ff, 
 		// inset -6px 1px 3px #0033ff;
 		// border-radius: 0px;
-		border: 1px solid $blue;
+		border: 1px solid grey;
 		border-radius: 55px;
 		background: $very-light-grey;
 	}
@@ -142,7 +172,7 @@ body {
 	}
 }
 #username {
-	top: 4px;
+	top: 26px;
 	width: 150px;
 	height: 35px;
 	position: absolute;
@@ -152,13 +182,41 @@ body {
 	padding-left: 10px;
 }
 
+.form-control:focus {
+	border-color: #66afe9;
+	outline: 0;
+	box-shadow: inset 5px -5px 2px #acacac, inset -5px 0px 2px #acacac;
+	border: 1px solid #FDFEFF;
+}
+
+.btn-primary {
+	color: white;
+	background-color: $gitred;
+	border-color: rgb(255, 255, 255);
+}
+
+.btn-primary:hover {
+	color: white;
+	background-color: $gitred;
+	border-color: rgb(255, 255, 255);
+}
+
+.btn-primary:active {
+	color: white;
+	background-color: rgb(175, 30, 30);
+	border-color: rgb(255, 255, 255);
+	box-shadow: inset 1px 1px 4px rgb(26, 3, 3);
+}
+
 #timestamp {
 	float: right;
 }
+
 // new classes-Tyler
 .glyphicon-user {
+	color: whitesmoke;
 	position: absolute;
-	top: 10px;
+	top: 35px;
 	right: 185px;
 	display: inline-block;
 	font-family: 'Glyphicons Halflings';
@@ -175,5 +233,11 @@ body {
 	left: 20px;
 	font-size: 20px;
 	margin: 0 0 10px;
-	color: rgb(175, 30, 30);
+	color: $gitred;
+	// text-shadow: -1px 1px 0px rgb(197, 197, 197);
+}
+
+// User input + glyph
+.user-glyph {
+
 }
