@@ -5,7 +5,9 @@ $dark-grey: #909090;
 $very-light-grey: #FCFCFC;
 $cool-blue-gradient: linear-gradient(top, lighten($blue, 10%), $blue);
 $black-gradient: linear-gradient(top, lighten(black, 20%), black);
-$gitred: rgb(175, 30, 30);
+// $gitred: rgb(175, 30, 30);
+$gitred: #DA3610;
+$light-brown: rgb(233, 225, 217);
 
 .navbar-header {}
 	
@@ -17,6 +19,7 @@ $gitred: rgb(175, 30, 30);
 	border-bottom-width: 10px;
 	border-style: double;
 	background-image: url('http://www.desktopas.com/files/2013/06/Black-Abstract-Background-Minimalistic-Textures-Gray-White-Arrows-1920x1080.jpg');
+	// background-image: url('http://turbo.premiumpixels.com/wp-content/uploads/2011/05/preview11.jpg');
 
 
 }
@@ -73,8 +76,8 @@ $gitred: rgb(175, 30, 30);
 }
 
 body {
-	background-image: url('http://s1.goodfon.com/wallpaper/previews-middle/63011.jpg');
-	background-size: 615px 950px;
+	// background-image: url('http://s1.goodfon.com/wallpaper/previews-middle/63011.jpg');
+	// background-size: 615px 950px;
 
 	// background-image:url('http://cdn.bleacherreport.net/images_root/slides/photos/000/897/602/smackdown-logo_display_image.png?1303990582');
 	// background-repeat: repeat-y;
@@ -95,10 +98,11 @@ body {
 	padding: 1px;
 	padding-top: 40px;
 	padding-bottom: 5px;
-	box-shadow: 3px 5px 15px rgb(61, 61, 61);
+	// background-color: rgb(185, 183, 183);
+	// box-shadow: 3px 5px 15px rgb(61, 61, 61);
 	background-repeat: no-repeat;
 	background-image: url('http://www.desktopas.com/files/2013/06/Black-Abstract-Background-Minimalistic-Textures-Gray-White-Arrows-1920x1080.jpg');
-	background-size: 1195px 800px;
+	background-size: 1195px 1360px;
 }
 
 .chat-window {
@@ -107,9 +111,9 @@ body {
 	margin: 0 auto;
 	background: $very-light-grey;
 	// border: 10px solid $light-grey;
-	box-shadow: 1px 1px 1px $blue;
-	box-shadow: inset 5px -5px 2px $light-grey,
-				inset -5px 5px 2px $light-grey;
+	// box-shadow: 1px 1px 1px $blue;
+	// box-shadow: inset 5px -5px 2px $light-grey,
+	// 			inset -5px 5px 2px $light-grey;
 		// border-radius: 10px;
 	z-index: 1000;
 	overflow: scroll;
@@ -167,7 +171,7 @@ body {
 		display: inline-block;
 		width: 80%;
 		margin-left: 20px;
-		margin-top: 20px;
+		margin-top: 5px;
 		vertical-align: middle;
 	}
 }
@@ -245,5 +249,5 @@ hr {
 	width: 100%;
 	border: 1px solid $gitred;
 	color: black;
-	box-shadow: 1px 3px 5px darken($gitred, 10%);
+	// box-shadow: 1px 3px 5px darken($gitred, 10%);
 }
