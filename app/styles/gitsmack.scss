@@ -217,19 +217,33 @@ body {
 .btn-primary {
 	color: white;
 	background-color: $gitred;
-	border-color: rgb(255, 255, 255);
+	border-color: black;
+	// border-color: rgb(255, 255, 255);
 }
 
 .btn-primary:hover {
 	color: white;
 	background-color: $gitred;
-	border-color: rgb(255, 255, 255);
+	border-color: black;
+	// border-color: rgb(255, 255, 255);
+}
+.btn-primary:focus {
+	color: white;
+	background-color: $gitred;
+	border-color: black;
+	// border-color: rgb(255, 255, 255);
+}
+.btn-primary:visited {
+	color: white;
+	background-color: $gitred;
+	border-color: black;
+	// border-color: rgb(255, 255, 255);
 }
 
 .btn-primary:active {
-	color: white;
-	background-color: rgb(175, 30, 30);
-	border-color: rgb(255, 255, 255);
+	color: $back-black;
+	background-color: $gitteal;
+	border-color: black;
 	box-shadow: inset 1px 1px 4px rgb(26, 3, 3);
 }
 
