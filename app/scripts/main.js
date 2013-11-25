@@ -50,9 +50,9 @@ function addToChatWindow(msg){
 	$(".chat-window").append(chatMessage)
 };
 
-// function timeoutRefresh(){
-// 	setInterval(checkForNewChat, 3000);
-// };
+function timeoutRefresh(){
+	setInterval(checkForNewChat, 3000);
+};
 
 function formatTime(timestamp) {
 	var time = moment(timestamp).format("hh:mm");
