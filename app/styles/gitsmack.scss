@@ -5,7 +5,15 @@ $dark-grey: #909090;
 $very-light-grey: #FCFCFC;
 $cool-blue-gradient: linear-gradient(top, lighten($blue, 10%), $blue);
 $black-gradient: linear-gradient(top, lighten(black, 20%), black);
-$gitred: rgb(175, 30, 30);
+// $gitred: rgb(175, 30, 30);
+$gitred: #DA3610;
+$gitteal: #10b4da;
+$light-brown: rgb(233, 225, 217);
+$back-black: #1d1b1b;
+
+h3 {
+	font-family:'Raleway', sans-serif;
+}
 
 .navbar-header {}
 	
@@ -16,7 +24,9 @@ $gitred: rgb(175, 30, 30);
 	color: black;
 	border-bottom-width: 10px;
 	border-style: double;
-	background-image: url('http://www.desktopas.com/files/2013/06/Black-Abstract-Background-Minimalistic-Textures-Gray-White-Arrows-1920x1080.jpg');
+	background-color: $back-black;
+	// background-image: url('http://www.desktopas.com/files/2013/06/Black-Abstract-Background-Minimalistic-Textures-Gray-White-Arrows-1920x1080.jpg');
+	// background-image: url('http://turbo.premiumpixels.com/wp-content/uploads/2011/05/preview11.jpg');
 
 
 }
@@ -34,8 +44,8 @@ $gitred: rgb(175, 30, 30);
 //git-Smack 
 .navbar-inverse .navbar-brand{
 	color: whitesmoke;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 600;
+	font-family:'Raleway', sans-serif;
+	// font-weight: 600;
 	font-size: 40px;
 	padding-bottom: 5px;
 	// text-shadow: -1px 1px 0px rgb(175, 30, 30);
@@ -53,7 +63,7 @@ $gitred: rgb(175, 30, 30);
 }
 
 .navbar-brand {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family:'Raleway', sans-serif;
 }
 
 // About, Home, User
@@ -62,8 +72,8 @@ $gitred: rgb(175, 30, 30);
 	float: left;
 	margin: 0;
 	left: 30px;
-	font-family: Source Sans Pro;
-	font-weight: 900;
+	font-family:'Raleway', sans-serif;
+	// font-weight: 900;
 	font-size: 20px;
 	top: 25px;
 }
@@ -73,8 +83,9 @@ $gitred: rgb(175, 30, 30);
 }
 
 body {
-	background-image: url('http://s1.goodfon.com/wallpaper/previews-middle/63011.jpg');
-	background-size: 615px 950px;
+	background-color: $gitteal;
+	// background-image: url('http://s1.goodfon.com/wallpaper/previews-middle/63011.jpg');
+	// background-size: 615px 950px;
 
 	// background-image:url('http://cdn.bleacherreport.net/images_root/slides/photos/000/897/602/smackdown-logo_display_image.png?1303990582');
 	// background-repeat: repeat-y;
@@ -89,27 +100,29 @@ body {
 	width: 100%;
 	height: 700px;
 	margin-top: 75px;
-	border: 1px solid #acacac;
-	border-radius: 10px;
+	// border: 1px solid #acacac;
+	border-radius: 5px;
 	background: rgb(29, 27, 27);
 	padding: 1px;
 	padding-top: 40px;
 	padding-bottom: 5px;
-	box-shadow: 3px 5px 15px rgb(61, 61, 61);
+	background-color: $back-black;
+	// box-shadow: 3px 5px 15px rgb(61, 61, 61);
 	background-repeat: no-repeat;
-	background-image: url('http://www.desktopas.com/files/2013/06/Black-Abstract-Background-Minimalistic-Textures-Gray-White-Arrows-1920x1080.jpg');
-	background-size: 1195px 800px;
+	// background-image: url('http://www.desktopas.com/files/2013/06/Black-Abstract-Background-Minimalistic-Textures-Gray-White-Arrows-1920x1080.jpg');
+	background-size: 1195px 1360px;
+
 }
 
 .chat-window {
-	width: 768px; /*this is 80 percent of 960 (i think)*/
+	width: 90%; /*this is 80 percent of 960 (i think)*/
 	height: 85%;
 	margin: 0 auto;
 	background: $very-light-grey;
 	// border: 10px solid $light-grey;
-	box-shadow: 1px 1px 1px $blue;
-	box-shadow: inset 5px -5px 2px $light-grey,
-				inset -5px 5px 2px $light-grey;
+	// box-shadow: 1px 1px 1px $blue;
+	// box-shadow: inset 5px -5px 2px $light-grey,
+	// 			inset -5px 5px 2px $light-grey;
 		// border-radius: 10px;
 	z-index: 1000;
 	overflow: scroll;
@@ -132,18 +145,20 @@ body {
 		width: 85%;
 		margin-top: 5px;
 		height: 50px;
-		box-shadow: inset 5px -5px 2px $light-grey,
-				inset -5px 0px 2px $light-grey;
+		// box-shadow: inset 5px -5px 2px $light-grey,
+		// 		inset -5px 0px 2px $light-grey;
 		// box-shadow: inset 5px -5px 2px #acacac, 
 		// inset -4px 0px 2px #ACACAC, 
 		// inset 5px -6px 5px #0033ff, 
 		// inset -6px 1px 3px #0033ff;
 		// border-radius: 0px;
 		border: 1px solid grey;
-		border-radius: 55px;
+		// border-radius: 55px;
 		background: $very-light-grey;
+		font-family:'Raleway', sans-serif;
 	}
 	button {
+		font-family:'Raleway', sans-serif;
 		float: right;
 		padding: 10px 10px;
 		margin-top: 7px;
@@ -162,13 +177,17 @@ body {
 	z-index: 99999;
 	h4 {
 		display: inline-block;
+		// color: $gitteal;
+		font-family:'Raleway', sans-serif;
+		font-weight: 700;
 	}
 	p {
 		display: inline-block;
 		width: 80%;
 		margin-left: 20px;
-		margin-top: 20px;
+		margin-top: 5px;
 		vertical-align: middle;
+		font-family:'Raleway', sans-serif;
 	}
 }
 #username {
@@ -178,38 +197,59 @@ body {
 	position: absolute;
 	right: 20px;
 	margin: 5px;
-	border-radius: 20px;
+	// border-radius: 20px;
 	padding-left: 10px;
+	border: 1px solid grey;
+	background: $very-light-grey;
+	border-radius: 5px;
+	font-family:'Raleway', sans-serif;
+
 }
 
 .form-control:focus {
-	border-color: #66afe9;
+	// border-color: #66afe9;
 	outline: 0;
-	box-shadow: inset 5px -5px 2px #acacac, inset -5px 0px 2px #acacac;
+	// box-shadow: inset 5px -5px 2px #acacac, inset -5px 0px 2px #acacac;
 	border: 1px solid #FDFEFF;
 }
+
 
 .btn-primary {
 	color: white;
 	background-color: $gitred;
-	border-color: rgb(255, 255, 255);
+	border-color: black;
+	// border-color: rgb(255, 255, 255);
 }
 
 .btn-primary:hover {
 	color: white;
 	background-color: $gitred;
-	border-color: rgb(255, 255, 255);
+	border-color: black;
+	// border-color: rgb(255, 255, 255);
+}
+.btn-primary:focus {
+	color: white;
+	background-color: $gitred;
+	border-color: black;
+	// border-color: rgb(255, 255, 255);
+}
+.btn-primary:visited {
+	color: white;
+	background-color: $gitred;
+	border-color: black;
+	// border-color: rgb(255, 255, 255);
 }
 
 .btn-primary:active {
-	color: white;
-	background-color: rgb(175, 30, 30);
-	border-color: rgb(255, 255, 255);
+	color: $back-black;
+	background-color: $gitteal;
+	border-color: black;
 	box-shadow: inset 1px 1px 4px rgb(26, 3, 3);
 }
 
 #timestamp {
 	float: right;
+	color: $gitred;
 }
 
 // new classes-Tyler
@@ -245,5 +285,5 @@ hr {
 	width: 100%;
 	border: 1px solid $gitred;
 	color: black;
-	box-shadow: 1px 3px 5px darken($gitred, 10%);
+	// box-shadow: 1px 3px 5px darken($gitred, 10%);
 }
