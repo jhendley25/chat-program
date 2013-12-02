@@ -1,14 +1,17 @@
 $(document).ready(function(){
 	getMessages();
 	$("#submit-btn").click(function(){saveMessage()})
-	timeoutRefresh();
+	// timeoutRefresh();
 });
 
+var loadedUp = false
+var bigOlGlobal = 0
+var tinyLilGlobal = bigOlGlobal
 
 var Message = Parse.Object.extend("Message");
-	
-var MessageCollection = Parse.Collection.extend({		
-	model: Message						
+
+var MessageCollection = Parse.Collection.extend({
+	model: Message
 });
 var messages = new MessageCollection();
 
@@ -17,27 +20,46 @@ function saveMessage(){
 	message.set('username', $('#username').val());
 	message.set('content', $('.form-control').val());
 	$('.form-control').val('');
-	message.save(message, {						
+	message.save(message, {
 
 		success: function(message){
 			console.log('message saved, YEAH!!!!!!!!!!!!!!!!!')
-			addToChatWindow(message);
-		}, 
+			addToChatWindow(message)
+            tinyLilGlobal += 1
+		},
 		error: function(message, error){
 			console.log('message not saved, BOOOO!!!!!!!!!!!!!!!!!')
 		}
-	})	
+	})
 }
 
 function getMessages(){
-	messages.fetch({
-		success: function(collection){
-			$('.chat-window').html('')  /*!!! this goes here because parse takes a half a second to refresh, 2 lines up, then clears .chat-window*/
-			collection.each(function(msg){
-				addToChatWindow(msg);
-			});
-		}
-	});
+    if(!loadedUp){
+    	messages.fetch({
+    		success: function(collection){
+                loadedUp = true
+    			$('.chat-window').html('')  /*!!! this goes here because parse takes a half a second to refresh, 2 lines up, then clears .chat-window*/
+    			collection.each(function(msg){
+    				addToChatWindow(msg);
+                    bigOlGlobal += 1
+    			});
+                weBeScrolling()
+
+    		}
+    	});
+    }else{
+        messages.fetch({
+            success: function(collection){
+                $('.chat-window').html('')  /*!!! this goes here because parse takes a half a second to refresh, 2 lines up, then clears .chat-window*/
+                collection.each(function(msg){
+                    addToChatWindow(msg);
+                    tinyLilGlobal += 1
+                });
+                weBeScrolling()
+
+            }
+        });
+    }
 };
 
 function addToChatWindow(msg){
@@ -62,3 +84,9 @@ function formatTime(timestamp) {
 function checkForNewChat(){
 	getMessages();				/*!!! as opposed to putting --$('.chat-window').html('')-- here, because it clears the .chat-window before parse updates/refreshes/fetches so you see the half a second it takes parse to refresh happening. clear screen, wait half a second, then refresh*/
 };
+
+function weBeScrolling(){
+    if(bigOlGlobal != tinyLilGlobal){
+        $(".chat-window").scrollTop(400000)
+    }
+}

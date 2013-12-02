@@ -16,7 +16,7 @@ h3 {
 }
 
 .navbar-header {}
-	
+
 .navbar-inverse {
 	background: white;
 	// background: linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
@@ -41,7 +41,7 @@ h3 {
 	}
 }
 
-//git-Smack 
+//git-Smack
 .navbar-inverse .navbar-brand{
 	color: whitesmoke;
 	font-family:'Raleway', sans-serif;
@@ -89,7 +89,7 @@ body {
 
 	// background-image:url('http://cdn.bleacherreport.net/images_root/slides/photos/000/897/602/smackdown-logo_display_image.png?1303990582');
 	// background-repeat: repeat-y;
-	
+
 }
 
 .container {
@@ -115,6 +115,7 @@ body {
 }
 
 .chat-window {
+    position: relative;
 	width: 90%; /*this is 80 percent of 960 (i think)*/
 	height: 85%;
 	margin: 0 auto;
@@ -137,7 +138,7 @@ body {
 }
 
 .chat-inputs {
-	width: 768px; 
+	width: 768px;
 	padding: 15px;
 	margin: 0 auto;
 	input {
@@ -147,9 +148,9 @@ body {
 		height: 50px;
 		// box-shadow: inset 5px -5px 2px $light-grey,
 		// 		inset -5px 0px 2px $light-grey;
-		// box-shadow: inset 5px -5px 2px #acacac, 
-		// inset -4px 0px 2px #ACACAC, 
-		// inset 5px -6px 5px #0033ff, 
+		// box-shadow: inset 5px -5px 2px #acacac,
+		// inset -4px 0px 2px #ACACAC,
+		// inset 5px -6px 5px #0033ff,
 		// inset -6px 1px 3px #0033ff;
 		// border-radius: 0px;
 		border: 1px solid grey;
@@ -286,4 +287,10 @@ hr {
 	border: 1px solid $gitred;
 	color: black;
 	// box-shadow: 1px 3px 5px darken($gitred, 10%);
+}
+
+.scrollHelper {
+    position: absolute;
+    bottom: 0;
+    // display: none;
 }
