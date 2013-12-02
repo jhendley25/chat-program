@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	getMessages();
 	$("#submit-btn").click(function(){saveMessage()})
-	// timeoutRefresh();
+	timeoutRefresh();
 });
 
 var loadedUp = false
